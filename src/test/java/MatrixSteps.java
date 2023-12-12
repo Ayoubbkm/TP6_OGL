@@ -14,6 +14,7 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class MatrixSteps {
+
     double det ;
     Matrix transposeMatrix ;
     Matrix mat;
@@ -32,6 +33,7 @@ public class MatrixSteps {
             int j =0;
             data[i][j]= columns.get("col1");
             data[i][j+1] = columns.get("col2");
+
             data[i][j+2]= columns.get("col3");
             i=i+1;
         }
@@ -58,6 +60,7 @@ public class MatrixSteps {
             i=i+1;
         }
         mat.setData(data);
+
         transposeMatrix = MatrixMathematics.transpose(mat);
     }
 
@@ -70,11 +73,13 @@ public class MatrixSteps {
             int j =0;
             data[i][j]= columns.get("col1");
             data[i][j+1] = columns.get("col2");
+
             data[i][j+2]= columns.get("col3");
             i=i+1;
         }
         Matrix result = new Matrix() ;
         result.setData(data);
+
         assertEquals(result,transposeMatrix);
 
 
